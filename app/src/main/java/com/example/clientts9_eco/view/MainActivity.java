@@ -70,13 +70,13 @@ public class MainActivity extends AppCompatActivity implements OnMessageListener
 
                 break;
             case R.id.btn_Sandwich:
-                Order eOrder = new Order("Burrito");
+                Order eOrder = new Order("Sandwich");
                 String m = gson.toJson(eOrder);
                 udp.sendMessage(m);
 
                 break;
             case R.id.btn_Burrito:
-                Order order = new Order("Sandwich");
+                Order order = new Order("Burrito");
                 String mes = gson.toJson(order);
                 udp.sendMessage(mes);
 
