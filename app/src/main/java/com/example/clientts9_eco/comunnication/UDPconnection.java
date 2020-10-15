@@ -1,5 +1,8 @@
 package com.example.clientts9_eco.comunnication;
 
+import com.example.clientts9_eco.events.OnMessageListener;
+import com.example.clientts9_eco.view.MainActivity;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -25,6 +28,7 @@ public class UDPconnection extends Thread{
 	
 	
 	private DatagramSocket socket;
+	private OnMessageListener observer;
 	
 	public void run() {
 		
@@ -76,7 +80,9 @@ public class UDPconnection extends Thread{
 		
 		
 	}
-	
-	
-	
+
+
+	public void setObserver(OnMessageListener observer) {
+		this.observer = observer;
+	}
 }
